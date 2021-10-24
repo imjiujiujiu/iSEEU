@@ -1,0 +1,188 @@
+* {
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+	background-color: rgba($white,0);
+	width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $gray-300;
+	border-radius: 3px;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex .col_1-5 {
+	flex: 20%;
+	max-width: 20%;
+}
+
+.flex .col_4-5 {
+	flex: 80%;
+	max-width: 80%;
+}
+
+.flex .col_1-6 {
+	flex: 16.66%;
+	max-width: 16.66%;
+}
+
+.px-m {
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+.py-s {
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.view {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(img/view_bg.jpg);
+	background-size: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.view .container {
+	width: 70vw;
+	height: 80vh;
+	padding: 20px;
+	border-radius: 20px;
+	border: 10px solid #C4C4C4;
+	background-color: white;
+	overflow-y: scroll;
+}
+
+.title, .close {
+	position: fixed;
+	top: calc(10vh + 20px);
+}
+
+.title {
+	left: calc(15vw + 20px);
+	z-index: 100;
+}
+
+.close {
+	right: calc(15vw + 20px);
+	z-index: 100;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.content {
+	text-align: center;
+	padding-top: 20px;
+	overflow: hidden;
+}
+
+.content img {
+	margin-top: -10px;
+}
+
+.content img.high {
+	margin-top: -200px;
+}
+
+
+
+
+
+.content1 {animation: content1 25s both;}
+
+.msg1-02 {animation: msg .5s 3s backwards;}
+.msg1-03 {animation: msg .5s 6s backwards;}
+.msg1-04 {animation: msg .5s 9s backwards;}
+.msg1-05 {animation: msg .5s 10s backwards;}
+.msg1-06 {animation: msg .5s 11s backwards;}
+.msg1-07 {animation: msg .5s 14s backwards;}
+.msg1-08 {animation: msg .5s 15s backwards;}
+.msg1-09 {animation: msg .5s 18s backwards;}
+.msg1-10 {animation: msg .5s 21s backwards;}
+.msg1-11 {animation: msg .5s 24s backwards;}
+
+.clear {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+	animation:  clear 5s 25s both;
+}
+
+.msg2-01 {animation: msg .5s 30s backwards;}
+.msg2-02 {animation: msg .5s 33s backwards;}
+.msg2-03 {animation: msg .5s 36s backwards;}
+.msg2-04 {animation: msg .5s 37s backwards;}
+.msg2-05 {animation: msg .5s 40s backwards;}
+.msg2-06 {animation: msg .5s 43s backwards;}
+.msg2-07 {animation: msg .5s 46s backwards;}
+.msg2-08 {animation: msg .5s 49s backwards;}
+.msg2-09 {animation: msg .5s 50s backwards;}
+.msg2-10 {animation: msg .5s 52s backwards;}
+
+
+
+
+@keyframes msg {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+	100% {
+		opacity: 1;
+		height: auto;
+	}
+}
+
+@keyframes content1 {
+	99% {
+		height: auto;
+		padding-top: 20px;
+		opacity: 1;
+	}
+	100% {
+		height: 0;
+		padding: 0;
+		opacity: 0;
+	}
+}
+
+@keyframes clear {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+	5% {
+		opacity: 1;
+		height: 100%;
+	}
+	95% {
+		opacity: 1;
+		height: 100%;
+	}
+	100% {
+		opacity: 0;
+		height: 0;
+	}
+}
